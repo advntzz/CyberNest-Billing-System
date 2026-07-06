@@ -2,15 +2,6 @@
 <img width="1919" height="939" alt="image" src="https://github.com/user-attachments/assets/f6801d93-c8ed-4ae0-96d3-d296f0360a7d" />
 Final Project Pemrograman Web
 
-cyber_billing_app
-│
-├── assets
-├── config
-├── docs
-├── includes
-├── pages
-├── database.sql
-└── index.php
 
 ## Teknologi
 - PHP Native
