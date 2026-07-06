@@ -1,0 +1,202 @@
+:root {
+    --bg-main: #050807;
+    --bg-card: #0b1411;
+    --green: #39ff88;
+    --green-soft: rgba(57, 255, 136, .16);
+    --green-border: rgba(57, 255, 136, .35);
+    --text-muted: #94a39c;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(57,255,136,.14), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0,255,170,.08), transparent 35%),
+        var(--bg-main);
+    color: #e8fff2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.cyber-navbar {
+    background: rgba(3, 8, 6, .9);
+    border-bottom: 1px solid var(--green-border);
+    backdrop-filter: blur(12px);
+}
+
+.neon-text {
+    color: var(--green) !important;
+    text-shadow: 0 0 12px rgba(57,255,136,.75);
+}
+
+.nav-link {
+    color: #d7ffe7 !important;
+    border-radius: 12px;
+    padding-inline: 14px !important;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #07100b !important;
+    background: var(--green);
+    box-shadow: 0 0 18px rgba(57,255,136,.45);
+}
+
+.cyber-card {
+    background: linear-gradient(145deg, rgba(11,20,17,.96), rgba(5,12,9,.96));
+    border: 1px solid var(--green-border);
+    border-radius: 20px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, .32), inset 0 0 28px rgba(57,255,136,.04);
+}
+
+.hero-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-card::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(57,255,136,.12);
+    top: -110px;
+    right: -80px;
+    filter: blur(2px);
+}
+
+.stat-card {
+    min-height: 135px;
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: var(--green-soft);
+    color: var(--green);
+    border: 1px solid var(--green-border);
+}
+
+.btn-neon {
+    background: var(--green);
+    color: #07100b;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 16px rgba(57,255,136,.35);
+}
+
+.btn-neon:hover {
+    background: #7dffb4;
+    color: #07100b;
+}
+
+.btn-outline-neon {
+    border: 1px solid var(--green-border);
+    color: var(--green);
+    border-radius: 12px;
+}
+
+.btn-outline-neon:hover {
+    background: var(--green);
+    color: #07100b;
+}
+
+.form-control, .form-select {
+    background: rgba(3, 8, 6, .82);
+    color: #e8fff2;
+    border: 1px solid rgba(57,255,136,.25);
+    border-radius: 12px;
+}
+
+.form-control:focus, .form-select:focus {
+    background: rgba(3, 8, 6, .96);
+    color: #e8fff2;
+    border-color: var(--green);
+    box-shadow: 0 0 0 .2rem rgba(57,255,136,.15);
+}
+
+.form-control::placeholder { color: #6d7a73; }
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #e8fff2;
+    --bs-table-border-color: rgba(57,255,136,.16);
+}
+
+.table thead th {
+    color: var(--green);
+    background: rgba(57,255,136,.08);
+}
+
+.badge-neon {
+    background: var(--green-soft);
+    color: var(--green);
+    border: 1px solid var(--green-border);
+}
+
+.badge-danger-soft {
+    background: rgba(255, 84, 84, .12);
+    color: #ff8a8a;
+    border: 1px solid rgba(255, 84, 84, .28);
+}
+
+.text-muted-custom { color: var(--text-muted); }
+
+a { color: var(--green); }
+
+.page-content {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: transform .44s ease, opacity .44s ease;
+}
+
+.page-content.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-content.exiting {
+    opacity: 0;
+    transform: translateY(-12px);
+    transition: transform .18s ease, opacity .18s ease;
+}
+
+@media (max-width: 576px) {
+    .hero-card h1 { font-size: 1.8rem; }
+    .table-responsive { font-size: .9rem; }
+}
+
+/* Header clock styling */
+#headerClock {
+    background: rgba(3, 8, 6, 0.55);
+    color: var(--green);
+    border: 1px solid rgba(57,255,136,.12);
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(57,255,136,.05) inset, 0 6px 18px rgba(57,255,136,.06);
+}
+
+@media (max-width: 576px) {
+    #headerClock { display: none; }
+}
+
+.header-clock .clock-icon {
+    filter: drop-shadow(0 0 6px rgba(57,255,136,.25));
+    font-size: 1rem;
+}
+
+.header-clock #headerClockTime {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.6px;
+}
+
+.header-clock #headerClockDate {
+    color: var(--text-muted);
+    margin-left: 6px;
+    font-weight: 500;
+}

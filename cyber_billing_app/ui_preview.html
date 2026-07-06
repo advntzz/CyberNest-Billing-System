@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cyber Billing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top cyber-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold neon-text" href="#dashboard">⚡ CYBER BILLING</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto gap-lg-2">
+                <li class="nav-item"><a class="nav-link active" href="#dashboard">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pelanggan">Pelanggan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#komputer">Komputer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#billing">Billing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#laporan">Laporan</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4">
+    <section id="dashboard" class="cyber-card hero-card p-4 p-lg-5 mb-4">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8 position-relative">
+                <p class="text-uppercase text-muted-custom mb-2">Aplikasi Billing Warnet</p>
+                <h1 class="display-5 fw-bold neon-text">Cyber Billing</h1>
+                <p class="lead text-muted-custom mb-4">Kelola pelanggan, komputer, sesi bermain, dan laporan pendapatan warnet dengan desain hijau neon dan hitam.</p>
+                <a href="#billing" class="btn btn-neon me-2">Mulai Billing</a>
+                <a href="#komputer" class="btn btn-outline-neon">Cek Komputer</a>
+            </div>
+            <div class="col-lg-4 position-relative">
+                <div class="cyber-card p-3">
+                    <div class="d-flex justify-content-between mb-2"><span>PC Online</span><span class="neon-text">4</span></div>
+                    <div class="progress bg-dark" role="progressbar">
+                        <div class="progress-bar" style="width: 60%; background:#39ff88;"></div>
+                    </div>
+                    <p class="small text-muted-custom mt-3 mb-0">Monitoring sederhana untuk melihat komputer yang sedang dipakai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-3 col-sm-6">
+            <div class="cyber-card stat-card p-3"><div class="stat-icon mb-3">👤</div><p class="text-muted-custom mb-1">Total Pelanggan</p><h3 class="fw-bold">12</h3></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="cyber-card stat-card p-3"><div class="stat-icon mb-3">💻</div><p class="text-muted-custom mb-1">PC Tersedia</p><h3 class="fw-bold">6</h3></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="cyber-card stat-card p-3"><div class="stat-icon mb-3">🎮</div><p class="text-muted-custom mb-1">PC Dipakai</p><h3 class="fw-bold">4</h3></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="cyber-card stat-card p-3"><div class="stat-icon mb-3">💸</div><p class="text-muted-custom mb-1">Pendapatan</p><h3 class="fw-bold">Rp 85.000</h3></div>
+        </div>
+    </div>
+
+    <section id="pelanggan" class="row g-4 mb-4">
+        <div class="col-lg-4">
+            <div class="cyber-card p-4">
+                <h4 class="neon-text mb-3">Tambah Pelanggan</h4>
+                <form>
+                    <div class="mb-3"><label class="form-label">Nama</label><input type="text" class="form-control" placeholder="Masukkan nama"></div>
+                    <div class="mb-3"><label class="form-label">No HP</label><input type="text" class="form-control" placeholder="08xxxxxxxxxx"></div>
+                    <div class="mb-3"><label class="form-label">Alamat</label><textarea class="form-control" rows="3"></textarea></div>
+                    <button class="btn btn-neon w-100" type="button">Simpan</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="cyber-card p-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between gap-2 mb-3"><h4 class="neon-text mb-0">Data Pelanggan</h4><input class="form-control search-demo" placeholder="Cari pelanggan..."></div>
+                <div class="table-responsive">
+                    <table class="table align-middle"><thead><tr><th>Nama</th><th>No HP</th><th>Alamat</th><th>Aksi</th></tr></thead><tbody>
+                        <tr><td>Dom</td><td>08123456789</td><td>Yogyakarta</td><td><button class="btn btn-sm btn-outline-neon">Edit</button> <button class="btn btn-sm btn-danger">Hapus</button></td></tr>
+                        <tr><td>Raka</td><td>08987654321</td><td>Sleman</td><td><button class="btn btn-sm btn-outline-neon">Edit</button> <button class="btn btn-sm btn-danger">Hapus</button></td></tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="komputer" class="cyber-card p-4 mb-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2 mb-3"><h4 class="neon-text mb-0">Data Komputer</h4><button class="btn btn-neon">Tambah PC</button></div>
+        <div class="table-responsive">
+            <table class="table align-middle"><thead><tr><th>Kode PC</th><th>Spesifikasi</th><th>Status</th><th>Aksi</th></tr></thead><tbody>
+                <tr><td class="fw-bold">PC-01</td><td>Ryzen 5, RAM 16GB, GTX 1660</td><td><span class="badge badge-neon">Tersedia</span></td><td><button class="btn btn-sm btn-outline-neon">Edit</button></td></tr>
+                <tr><td class="fw-bold">PC-02</td><td>Core i5, RAM 16GB, RTX 2060</td><td><span class="badge badge-danger-soft">Dipakai</span></td><td><button class="btn btn-sm btn-outline-neon">Edit</button></td></tr>
+            </tbody></table>
+        </div>
+    </section>
+
+    <section id="billing" class="row g-4 mb-4">
+        <div class="col-lg-4">
+            <div class="cyber-card p-4">
+                <h4 class="neon-text mb-3">Tambah Sesi Billing</h4>
+                <form>
+                    <div class="mb-3"><label class="form-label">Pelanggan</label><select class="form-select"><option>Dom</option><option>Raka</option></select></div>
+                    <div class="mb-3"><label class="form-label">Komputer</label><select class="form-select"><option>PC-01</option><option>PC-02</option></select></div>
+                    <div class="row g-2">
+                        <div class="col-6 mb-3"><label class="form-label">Durasi/Jam</label><input id="durasi" type="number" step="0.5" class="form-control" value="1"></div>
+                        <div class="col-6 mb-3"><label class="form-label">Tarif/Jam</label><input id="tarif" type="number" class="form-control" value="5000"></div>
+                    </div>
+                    <div class="cyber-card p-3 mb-3"><span class="text-muted-custom">Preview Total:</span><h4 id="previewTotal" class="neon-text mb-0">Rp 5.000</h4></div>
+                    <button class="btn btn-neon w-100" type="button">Simpan Billing</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="cyber-card p-4">
+                <h4 class="neon-text mb-3">Riwayat Billing</h4>
+                <div class="table-responsive">
+                    <table class="table align-middle"><thead><tr><th>Pelanggan</th><th>PC</th><th>Durasi</th><th>Total</th><th>Status</th></tr></thead><tbody>
+                        <tr><td>Dom</td><td>PC-02</td><td>2 jam</td><td>Rp 10.000</td><td><span class="badge badge-neon">Lunas</span></td></tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="laporan" class="cyber-card p-4">
+        <h4 class="neon-text mb-3">Laporan Pendapatan</h4>
+        <div class="table-responsive">
+            <table class="table align-middle"><thead><tr><th>Tanggal</th><th>Total Sesi</th><th>Pendapatan</th></tr></thead><tbody>
+                <tr><td>2026-06-01</td><td>8</td><td>Rp 85.000</td></tr>
+            </tbody></table>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center py-4 text-secondary small">
+    <div>Cyber Billing Warnet &copy; 2026 - Preview HTML Bootstrap</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
